@@ -13,7 +13,7 @@ class CoctailsTableViewController: UITableViewController {
     // MARK: - Properties
     
     private let data: NSArray? = {
-        if let url = NSBundle.mainBundle().URLForResource("data", withExtension: "json", subdirectory: "Data") {
+        if let url = NSBundle.mainBundle().URLForResource("Cocktails", withExtension: "json", subdirectory: "Data") {
             if let data = NSData(contentsOfURL: url) {
                 return NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSArray
             }
