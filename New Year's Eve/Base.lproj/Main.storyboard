@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -87,27 +88,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="wOX-6j-A6i" detailTextLabel="YlJ-2Z-Eru" style="IBUITableViewCellStyleSubtitle" id="kD9-Sx-m1D">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kD9-Sx-m1D" customClass="CocktailTableViewCell" customModule="NYE" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kD9-Sx-m1D" id="PC2-K1-tA9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wOX-6j-A6i">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-1A-4ov">
+                                            <rect key="frame" x="8" y="8" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YlJ-2Z-Eru">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Subtitle label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt9-P8-p4r">
+                                            <rect key="frame" x="8" y="28" width="584" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Pt9-P8-p4r" firstAttribute="leading" secondItem="PC2-K1-tA9" secondAttribute="leadingMargin" id="2hv-W5-WFq"/>
+                                        <constraint firstItem="VYP-1A-4ov" firstAttribute="leading" secondItem="PC2-K1-tA9" secondAttribute="leadingMargin" id="Ibq-6E-ogX"/>
+                                        <constraint firstItem="VYP-1A-4ov" firstAttribute="bottom" secondItem="Pt9-P8-p4r" secondAttribute="top" id="LDC-fa-BL9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="VYP-1A-4ov" secondAttribute="trailing" id="Tby-Se-RRq"/>
+                                        <constraint firstItem="VYP-1A-4ov" firstAttribute="top" secondItem="PC2-K1-tA9" secondAttribute="topMargin" id="fc3-Kq-Jzd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Pt9-P8-p4r" secondAttribute="bottom" id="jZw-Sv-djq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Pt9-P8-p4r" secondAttribute="trailing" id="uJG-b7-VLh"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="mjd-S4-2WW" kind="showDetail" id="AdH-QD-kES"/>
+                                    <outlet property="subtitleLabel" destination="Pt9-P8-p4r" id="Hc7-qY-UJF"/>
+                                    <outlet property="titleLabel" destination="VYP-1A-4ov" id="CQD-qc-elY"/>
+                                    <segue destination="mjd-S4-2WW" kind="showDetail" id="ZbI-s0-8jl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

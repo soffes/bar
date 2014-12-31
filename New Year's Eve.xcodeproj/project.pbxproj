@@ -19,6 +19,7 @@
 		3B7C3A8B1A54710700AEABD1 /* Spirit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A8A1A54710700AEABD1 /* Spirit.swift */; };
 		3B7C3A8D1A54712100AEABD1 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */; };
 		3B7C3AA31A54783400AEABD1 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3B7C3AA21A54783400AEABD1 /* Data */; };
+		3B7C3AAB1A54806A00AEABD1 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3AAA1A54806A00AEABD1 /* CocktailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3B7C3A8A1A54710700AEABD1 /* Spirit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spirit.swift; sourceTree = "<group>"; };
 		3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		3B7C3AA21A54783400AEABD1 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
+		3B7C3AAA1A54806A00AEABD1 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		2161A41A1A5467DE00757E67 /* New Year's Eve */ = {
 			isa = PBXGroup;
 			children = (
+				3B7C3AA91A54805B00AEABD1 /* Table View Stuff */,
 				2161A41D1A5467DE00757E67 /* AppDelegate.swift */,
 				3B7C3A891A5470F800AEABD1 /* Models */,
 				3B7C3A811A546E6600AEABD1 /* View Controllers */,
@@ -107,6 +110,14 @@
 				3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3B7C3AA91A54805B00AEABD1 /* Table View Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				3B7C3AAA1A54806A00AEABD1 /* CocktailTableViewCell.swift */,
+			);
+			name = "Table View Stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				3B7C3A8D1A54712100AEABD1 /* Cocktail.swift in Sources */,
 				3B7C3A871A546EAA00AEABD1 /* DrinkTypeTableViewController.swift in Sources */,
 				3B7C3A831A546E7E00AEABD1 /* SpiritsTableViewController.swift in Sources */,
+				3B7C3AAB1A54806A00AEABD1 /* CocktailTableViewCell.swift in Sources */,
 				2161A4221A5467DE00757E67 /* DetailViewController.swift in Sources */,
 				217966851A547F5F00189A86 /* RecipeViewController.swift in Sources */,
 				3B7C3A851A546E8C00AEABD1 /* CoctailsTableViewController.swift in Sources */,

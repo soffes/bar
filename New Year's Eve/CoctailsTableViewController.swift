@@ -22,6 +22,15 @@ class CoctailsTableViewController: UITableViewController {
     }()
     
     
+    // MARK: - UIViewController
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView?.estimatedRowHeight = 54
+        tableView?.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    
     // MARK: - Private
     
     private func itemsInSection(section: Int) -> NSArray? {
@@ -54,10 +63,10 @@ class CoctailsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as CocktailTableViewCell
         let cocktail = cocktailAtIndexPath(indexPath)
-        cell.textLabel?.text = cocktail?.title
-        cell.detailTextLabel?.text = cocktail?.subtitle
+        cell.titleLabel?.text = cocktail?.title
+        cell.subtitleLabel?.text = cocktail?.subtitle
         return cell
     }
     
