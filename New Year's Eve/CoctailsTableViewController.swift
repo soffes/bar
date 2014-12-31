@@ -26,6 +26,7 @@ class CoctailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		title = "Cocktails"
         tableView?.estimatedRowHeight = 54
         tableView?.rowHeight = UITableViewAutomaticDimension
     }
@@ -52,14 +53,6 @@ class CoctailsTableViewController: UITableViewController {
     }
 
 
-	// MARK: - UIViewController
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		title = "Cocktails"
-	}
-    
-    
     // MARK: - UITableViewDataSource
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
