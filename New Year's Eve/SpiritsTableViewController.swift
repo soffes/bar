@@ -12,10 +12,31 @@ class SpiritsTableViewController: UITableViewController {
     
     // MARK: - Properties
     
+    var data: NSArray? = {
+        if let url = NSBundle.mainBundle().URLForResource("Spirits", withExtension: "json", subdirectory: "Data") {
+            if let data = NSData(contentsOfURL: url) {
+                return NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSArray
+            }
+        }
+        return nil
+    }()
+    
     
     // MARK: - Private
     
-    private func spirit(#indexPath: NSIndexPath) -> Spirit? {
+    private func itemsInSection(section: Int) -> NSArray? {
+        if let value = data {
+            if let dictionary = value[section] as? NSDictionary {
+                return dictionary["items"] as? NSArray
+            }
+        }
+        return nil
+    }
+    
+    private func spiritAtIndexPath(indexPath: NSIndexPath) -> String? {
+        if let items = itemsInSection(indexPath.section) {
+            return items[indexPath.row] as? String
+        }
         return nil
     }
     
@@ -23,20 +44,25 @@ class SpiritsTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0 // Number of categories
+        return data?.count ?? 0
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0 // Number of drinks in each category
+        return itemsInSection(section)?.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = spirit(indexPath: indexPath)?.name
+        cell.textLabel?.text = spiritAtIndexPath(indexPath)
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return nil // Return spirit category
+        if let value = data {
+            if let dictionary = value[section] as? NSDictionary {
+                return dictionary["title"] as? String
+            }
+        }
+        return nil
     }
 }
