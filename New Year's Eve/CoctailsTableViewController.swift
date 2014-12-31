@@ -50,6 +50,14 @@ class CoctailsTableViewController: UITableViewController {
         }
         return nil
     }
+
+
+	// MARK: - UIViewController
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		title = "Cocktails"
+	}
     
     
     // MARK: - UITableViewDataSource
@@ -83,7 +91,7 @@ class CoctailsTableViewController: UITableViewController {
 		super.prepareForSegue(segue, sender: sender)
 
 		if let navigationController = segue.destinationViewController as? UINavigationController {
-			if let viewController = navigationController.topViewController as? RecipeViewController {
+			if let viewController = navigationController.topViewController as? CocktailViewController {
 				if let indexPath = tableView.indexPathForSelectedRow() {
 					viewController.cocktail = cocktailAtIndexPath(indexPath)
 				}
