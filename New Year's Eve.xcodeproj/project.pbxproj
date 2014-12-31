@@ -15,6 +15,8 @@
 		3B7C3A831A546E7E00AEABD1 /* SpiritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */; };
 		3B7C3A851A546E8C00AEABD1 /* CoctailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A841A546E8C00AEABD1 /* CoctailsTableViewController.swift */; };
 		3B7C3A871A546EAA00AEABD1 /* DrinkTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */; };
+		3B7C3A8B1A54710700AEABD1 /* Spirit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A8A1A54710700AEABD1 /* Spirit.swift */; };
+		3B7C3A8D1A54712100AEABD1 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritsTableViewController.swift; sourceTree = "<group>"; };
 		3B7C3A841A546E8C00AEABD1 /* CoctailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoctailsTableViewController.swift; sourceTree = "<group>"; };
 		3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTypeTableViewController.swift; sourceTree = "<group>"; };
+		3B7C3A8A1A54710700AEABD1 /* Spirit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spirit.swift; sourceTree = "<group>"; };
+		3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		2161A41A1A5467DE00757E67 /* New Year's Eve */ = {
 			isa = PBXGroup;
 			children = (
+				3B7C3A891A5470F800AEABD1 /* Models */,
 				2161A41D1A5467DE00757E67 /* AppDelegate.swift */,
 				3B7C3A811A546E6600AEABD1 /* View Controllers */,
 				2161A41F1A5467DE00757E67 /* MasterViewController.swift */,
@@ -89,6 +94,15 @@
 				3B7C3A841A546E8C00AEABD1 /* CoctailsTableViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3B7C3A891A5470F800AEABD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B7C3A8A1A54710700AEABD1 /* Spirit.swift */,
+				3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7C3A8D1A54712100AEABD1 /* Cocktail.swift in Sources */,
 				3B7C3A871A546EAA00AEABD1 /* DrinkTypeTableViewController.swift in Sources */,
 				3B7C3A831A546E7E00AEABD1 /* SpiritsTableViewController.swift in Sources */,
 				2161A4221A5467DE00757E67 /* DetailViewController.swift in Sources */,
 				3B7C3A851A546E8C00AEABD1 /* CoctailsTableViewController.swift in Sources */,
+				3B7C3A8B1A54710700AEABD1 /* Spirit.swift in Sources */,
 				2161A41E1A5467DE00757E67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

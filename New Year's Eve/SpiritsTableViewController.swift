@@ -10,4 +10,33 @@ import UIKit
 
 class SpiritsTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    
+    
+    // MARK: - Private
+    
+    private func spirit(#indexPath: NSIndexPath) -> Spirit? {
+        return nil
+    }
+    
+    
+    // MARK: - UITableViewDataSource
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 0 // Number of categories
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0 // Number of drinks in each category
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel?.text = spirit(indexPath: indexPath)?.name
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return nil // Return spirit category
+    }
 }
