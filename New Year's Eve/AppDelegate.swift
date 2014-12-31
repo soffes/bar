@@ -35,6 +35,7 @@ import UIKit
     // MARK: - UIApplicationDelegate
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions options: [NSObject: AnyObject]?) -> Bool {
+		window?.tintColor = UIColor(red:0.800, green:0.271, blue:0.216, alpha: 1)
         configureAppearance()
         configureSplitViewController()
 		return true
