@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Sam’s Favorite",
+    "items": [
+      {
+        "title": "Old Fashioned",
+        "subtitle": "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange."
+      }
+    ]
+  },
+  {
+    "title": "Ellen’s Favorite",
+    "items": [
+      {
+        "title": "Whiskey Sour",
+        "subtitle": "Buffalo Trace bourbon, lemon juice, simple syrup, and optional egg white."
+      }
+    ]
+  },
+  {
+    "title": "House Favorite",
+    "items": [
+      {
+        "title": "Electric Lemonade",
+        "subtitle": "Absolut Citron, Blue Curaçao, sweet & sour, and Sprite. Served with a glowing surprise."
+      }
+    ]
+  },
+  {
+    "title": "Featured Cocktails",
+    "items": [
+      {
+        "title": "Sazerac",
+        "subtitle": "Rittenhouse 100 Rye, Pierre Ferrand 1840 Cognac, bitters, lemon."
+      },
+      {
+        "title": "Moscow Mule",
+        "subtitle": "Charbay Vodka, homemade ginger syrup, lime juice, club soda in copper tin."
+      },
+      {
+        "title": "Cosmopolitan",
+        "subtitle": "Grey Goose vodka, Cointreau, cranberry juice, lime juice. Sweet and delicious."
+      },
+      {
+        "title": "Vesper Martini",
+        "subtitle": "James Bond’s drink of choice. Gordon’s, vodka, Kina Lillet. Shaken, not stirred."
+      },
+      {
+        "title": "Sidecar",
+        "subtitle": "Pierre Ferrand 1840 Cognac, Cointreau, lemon juice, homemade cane sugar syrup."
+      },
+      {
+        "title": "Mint Julep",
+        "subtitle": "Classic Kentucky Derby libation. Baker’s bourbon served with a mint bouquet in a copper tin."
+      }
+    ]
+  },
+  {
+    "title": "House Classics",
+    "items": [
+      {
+        "title": "Kamikaze",
+        "subtitle": "Equal parts Greg Goose vodka, Cointreau, lime juice with lime spiral."
+      },
+      {
+        "title": "Gin & Tonic",
+        "subtitle": "Simply classic. Bombay gin with tonic service with a giant ice cube. No frills."
+      },
+      {
+        "title": "Margarita",
+        "subtitle": "Jose Cuervo Tequila and margarita mix. Blended with ice for frozen deliciousness."
+      },
+      {
+        "title": "Piña Colada",
+        "subtitle": "Malibu Coconut rum, pineapple juice, and cream. Blended to island perfection."
+      },
+      {
+        "title": "Martini",
+        "subtitle": "Grey Goose vodka or Tanqueray gin with extra dry vermouth served with stuffed green olives."
+      },
+      {
+        "title": "Hot Apple Toddy",
+        "subtitle": "Bulleitt bourbon, hot apple cider, honey, lemon wedge, and a cinnamon stick."
+      },
+      {
+        "title": "Rum & Coke",
+        "subtitle": "Bacardi rum mixed with Mexican Coca-Cola. It’s hard to go wrong with this one."
+      },
+      {
+        "title": "Screwdriver",
+        "subtitle": "Odwalla orange juice and Absolut vodka stirred. Always refreshing."
+      },
+      {
+        "title": "Shirley Temple",
+        "subtitle": "A sweet, nonalcholic delite. Sprite and homemade Grenadine. Ellen’s non-alcholic go to."
+      }
+    ]
+  },
+]
