@@ -30,6 +30,7 @@ import UIKit
             if let navigationController = splitViewController.viewControllers.last as? UINavigationController {
                 navigationController.topViewController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
             }
+            splitViewController.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         }
     }
 
