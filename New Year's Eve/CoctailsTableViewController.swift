@@ -24,6 +24,7 @@ class CoctailsTableViewController: UITableViewController {
     required init(coder: NSCoder) {
         super.init(coder: coder)
         title = "New Year’s Eve"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     }
     
     
