@@ -136,7 +136,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zJ6-na-AL0" kind="show" id="DGA-wi-XQT"/>
+                                    <segue destination="KGI-fz-sd2" kind="showDetail" id="Gc7-Y5-668"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -150,6 +150,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45S-jE-Oyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1448" y="-848"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IbO-Mb-m6o">
+            <objects>
+                <navigationController id="KGI-fz-sd2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eoW-hw-b1x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zJ6-na-AL0" kind="relationship" relationship="rootViewController" id="gwH-VU-aiq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHM-wv-aQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="-104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kjg-I9-tGM">
@@ -233,10 +249,11 @@
                             <outlet property="delegate" destination="zJ6-na-AL0" id="Z1q-E1-U0h"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Spirits" id="pEZ-mS-GLs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Off-jK-i2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="-150"/>
+            <point key="canvasLocation" x="2110" y="-104"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yUG-lL-AsK">
@@ -303,7 +320,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="gwH-VU-aiq"/>
         <segue reference="UV0-1o-u8b"/>
-        <segue reference="DGA-wi-XQT"/>
     </inferredMetricsTieBreakers>
 </document>
