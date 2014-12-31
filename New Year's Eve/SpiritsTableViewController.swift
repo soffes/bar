@@ -22,6 +22,14 @@ class SpiritsTableViewController: UITableViewController {
     }()
     
     
+    // MARK: - UIViewController
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView?.registerClass(TableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "Header")
+    }
+    
+    
     // MARK: - Private
     
     private func itemsInSection(section: Int) -> NSArray? {
@@ -35,7 +43,18 @@ class SpiritsTableViewController: UITableViewController {
     
     private func spiritAtIndexPath(indexPath: NSIndexPath) -> String? {
         if let items = itemsInSection(indexPath.section) {
-            return items[indexPath.row] as? String
+            if let dictionary = items[indexPath.row] as? NSDictionary {
+                return dictionary["title"] as? String
+            }
+        }
+        return nil
+    }
+    
+    private func titleForSectionAtIndex(section: Int) -> String? {
+        if let value = data {
+            if let dictionary = value[section] as? NSDictionary {
+                return dictionary["title"] as? String
+            }
         }
         return nil
     }
@@ -57,12 +76,17 @@ class SpiritsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let value = data {
-            if let dictionary = value[section] as? NSDictionary {
-                return dictionary["title"] as? String
-            }
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let title = titleForSectionAtIndex(section) {
+            let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as TableViewHeaderView
+            view.titleLabel.text = title.uppercaseString
+            return view
         }
+        
         return nil
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
 }

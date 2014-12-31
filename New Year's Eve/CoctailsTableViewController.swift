@@ -21,6 +21,11 @@ class CoctailsTableViewController: UITableViewController {
         return nil
     }()
     
+    private var numberOfSections: Int {
+        let count = data?.count ?? 0
+        return count + 1
+    }
+    
     required init(coder: NSCoder) {
         super.init(coder: coder)
         title = "New Year’s Eve"
@@ -84,15 +89,25 @@ class CoctailsTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return data?.count ?? 0
+        return numberOfSections
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == numberOfSections - 1 {
+            return 1
+        }
+        
         return itemsInSection(section)?.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as CocktailTableViewCell
+        if indexPath.section == numberOfSections - 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("PlainCell", forIndexPath: indexPath) as UITableViewCell
+            cell.textLabel?.text = "Spirits"
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("CocktailCell", forIndexPath: indexPath) as CocktailTableViewCell
         let cocktail = cocktailAtIndexPath(indexPath)
         cell.titleLabel?.text = cocktail?.title
         cell.subtitleLabel?.text = cocktail?.subtitle
@@ -100,19 +115,24 @@ class CoctailsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == numberOfSections - 1 {
+            return nil
+        }
+        
         if let title = titleForSectionAtIndex(section) {
             let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as TableViewHeaderView
             view.titleLabel.text = title.uppercaseString
             return view
         }
+        
         return nil
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 54
+        if section == numberOfSections - 1 {
+            return 0
+        }
+        
+        return 44
     }
 }

@@ -14,7 +14,6 @@ class TableViewHeaderView: UITableViewHeaderFooterView {
     
     let titleLabel: UILabel = {
         let view = UILabel()
-        view.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.textColor = UIColor(red:0.800, green:0.271, blue:0.216, alpha: 1)
         view.font = UIFont(name: "Avenir-Book", size: 12)
         return view
@@ -30,7 +29,6 @@ class TableViewHeaderView: UITableViewHeaderFooterView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(titleLabel)
-        setupConstraints()
     }
 
     required init(coder: NSCoder) {
@@ -38,13 +36,16 @@ class TableViewHeaderView: UITableViewHeaderFooterView {
     }
     
     
-    // MARK: - Private
+    // MARK: - UIView
     
-    private func setupConstraints() {
-        let views = [
-            "titleLabel": titleLabel
-        ]
-        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-15-[titleLabel]-8-|", options: nil, metrics: nil, views: views))
-        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-15-[titleLabel]-4-|", options: nil, metrics: nil, views: views))
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let textSize = titleLabel.intrinsicContentSize()
+        titleLabel.frame = CGRect(
+            x: 15,
+            y: bounds.size.height - 8 - textSize.height,
+            width: bounds.size.width - 15 - 8,
+            height: textSize.height
+        )
     }
 }
