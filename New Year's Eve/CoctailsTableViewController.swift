@@ -38,7 +38,6 @@ class CoctailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView?.estimatedRowHeight = 54
-        tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.contentInset = UIEdgeInsetsMake(10, 0, 0, 0)
         tableView?.registerClass(TableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "Header")
     }
@@ -134,5 +133,13 @@ class CoctailsTableViewController: UITableViewController {
         }
         
         return 44
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == numberOfSections - 1 {
+            return 54
+        }
+        
+        return UITableViewAutomaticDimension
     }
 }
