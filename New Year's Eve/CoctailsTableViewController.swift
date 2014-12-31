@@ -36,12 +36,7 @@ class CoctailsTableViewController: UITableViewController {
     private func cocktailAtIndexPath(indexPath: NSIndexPath) -> Cocktail? {
         if let items = itemsInSection(indexPath.section) {
             if let dictionary = items[indexPath.row] as? NSDictionary {
-                switch (dictionary["title"], dictionary["subtitle"]) {
-                case (.Some(let title as String), .Some(let subtitle as String)):
-                    return Cocktail(title: title, subtitle: subtitle)
-                default:
-                    return nil
-                }
+                return Cocktail(dictionary: dictionary)
             }
         }
         return nil

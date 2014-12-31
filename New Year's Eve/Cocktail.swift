@@ -9,6 +9,22 @@
 import Foundation
 
 struct Cocktail {
+    
+    // MARK: - Properties
+    
     let title: String
     let subtitle: String
+    
+    
+    // MARK: - Initializers
+    
+    init?(dictionary: NSDictionary) {
+        switch (dictionary["title"], dictionary["subtitle"]) {
+        case (.Some(let title as String), .Some(let subtitle as String)):
+            self.title = title
+            self.subtitle = subtitle
+        default:
+            return nil
+        }
+    }
 }
