@@ -20,7 +20,13 @@ class CocktailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		textView?.alwaysBounceVertical = true
+		automaticallyAdjustsScrollViewInsets = false
+
+		if let textView = textView {
+			textView.alwaysBounceVertical = true
+			textView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0)
+		}
+		
 		reload()
 	}
 
