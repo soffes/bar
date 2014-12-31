@@ -26,6 +26,7 @@ class SpiritsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView?.contentInset = UIEdgeInsetsMake(10, 0, 0, 0)
         tableView?.registerClass(TableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "Header")
     }
     
