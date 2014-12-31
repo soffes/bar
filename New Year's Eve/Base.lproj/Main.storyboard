@@ -83,7 +83,7 @@
         <scene sceneID="g5f-mT-rXh">
             <objects>
                 <tableViewController title="Cocktails" id="LgF-hk-N5p" customClass="CoctailsTableViewController" customModule="NYE" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="54" sectionHeaderHeight="10" sectionFooterHeight="10" id="tCD-s2-gKQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" id="tCD-s2-gKQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -93,14 +93,14 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kD9-Sx-m1D" id="PC2-K1-tA9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-1A-4ov">
-                                            <rect key="frame" x="16" y="8" width="576" height="21.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" text="Title label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-1A-4ov">
+                                            <rect key="frame" x="16" y="10" width="576" height="20.5"/>
                                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Subtitle label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt9-P8-p4r">
-                                            <rect key="frame" x="16" y="29" width="576" height="16.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Subtitle label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt9-P8-p4r">
+                                            <rect key="frame" x="16" y="32" width="576" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                             <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -109,9 +109,9 @@
                                     <constraints>
                                         <constraint firstItem="VYP-1A-4ov" firstAttribute="leading" secondItem="Pt9-P8-p4r" secondAttribute="leading" id="3Vb-cW-ABZ"/>
                                         <constraint firstItem="VYP-1A-4ov" firstAttribute="leading" secondItem="PC2-K1-tA9" secondAttribute="leadingMargin" constant="8" id="Ibq-6E-ogX"/>
-                                        <constraint firstItem="VYP-1A-4ov" firstAttribute="bottom" secondItem="Pt9-P8-p4r" secondAttribute="top" id="LDC-fa-BL9"/>
+                                        <constraint firstItem="Pt9-P8-p4r" firstAttribute="top" secondItem="VYP-1A-4ov" secondAttribute="bottom" constant="2" id="LDC-fa-BL9"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="VYP-1A-4ov" secondAttribute="trailing" id="Tby-Se-RRq"/>
-                                        <constraint firstItem="VYP-1A-4ov" firstAttribute="top" secondItem="PC2-K1-tA9" secondAttribute="topMargin" id="fc3-Kq-Jzd"/>
+                                        <constraint firstItem="VYP-1A-4ov" firstAttribute="top" secondItem="PC2-K1-tA9" secondAttribute="topMargin" constant="2" id="fc3-Kq-Jzd"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Pt9-P8-p4r" secondAttribute="bottom" id="jZw-Sv-djq"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Pt9-P8-p4r" secondAttribute="trailing" id="uJG-b7-VLh"/>
                                     </constraints>
@@ -203,7 +203,7 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5N9-04-g80">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
