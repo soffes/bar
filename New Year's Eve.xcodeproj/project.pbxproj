@@ -17,6 +17,7 @@
 		3B7C3A871A546EAA00AEABD1 /* DrinkTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */; };
 		3B7C3A8B1A54710700AEABD1 /* Spirit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A8A1A54710700AEABD1 /* Spirit.swift */; };
 		3B7C3A8D1A54712100AEABD1 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */; };
+		3B7C3AA31A54783400AEABD1 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3B7C3AA21A54783400AEABD1 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTypeTableViewController.swift; sourceTree = "<group>"; };
 		3B7C3A8A1A54710700AEABD1 /* Spirit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spirit.swift; sourceTree = "<group>"; };
 		3B7C3A8C1A54712100AEABD1 /* Cocktail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		3B7C3AA21A54783400AEABD1 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +67,10 @@
 		2161A41A1A5467DE00757E67 /* New Year's Eve */ = {
 			isa = PBXGroup;
 			children = (
-				3B7C3A891A5470F800AEABD1 /* Models */,
 				2161A41D1A5467DE00757E67 /* AppDelegate.swift */,
+				3B7C3A891A5470F800AEABD1 /* Models */,
 				3B7C3A811A546E6600AEABD1 /* View Controllers */,
+				3B7C3AA21A54783400AEABD1 /* Data */,
 				2161A41F1A5467DE00757E67 /* MasterViewController.swift */,
 				2161A4211A5467DE00757E67 /* DetailViewController.swift */,
 				2161A4231A5467DE00757E67 /* Main.storyboard */,
@@ -164,6 +167,7 @@
 			files = (
 				2161A4251A5467DE00757E67 /* Main.storyboard in Resources */,
 				2161A42A1A5467DE00757E67 /* LaunchScreen.xib in Resources */,
+				3B7C3AA31A54783400AEABD1 /* Data in Resources */,
 				2161A4271A5467DE00757E67 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
