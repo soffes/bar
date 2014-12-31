@@ -9,5 +9,6 @@
 import Foundation
 
 struct Cocktail {
-    
+    let title: String
+    let subtitle: String
 }

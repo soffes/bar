@@ -12,7 +12,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZQt-rj-IBC" kind="relationship" relationship="rootViewController" id="DjG-gd-DRq"/>
+                        <segue destination="LgF-hk-N5p" kind="relationship" relationship="rootViewController" id="UV0-1o-u8b"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
@@ -113,6 +113,7 @@
                             <outlet property="delegate" destination="LgF-hk-N5p" id="xfM-NV-LdQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="IzC-Jk-LtE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45S-jE-Oyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,4 +220,7 @@
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UV0-1o-u8b"/>
+    </inferredMetricsTieBreakers>
 </document>

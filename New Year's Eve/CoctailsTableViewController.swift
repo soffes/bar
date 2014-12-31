@@ -33,9 +33,16 @@ class CoctailsTableViewController: UITableViewController {
         return nil
     }
     
-    private func cocktailAtIndexPath(indexPath: NSIndexPath) -> NSDictionary? {
+    private func cocktailAtIndexPath(indexPath: NSIndexPath) -> Cocktail? {
         if let items = itemsInSection(indexPath.section) {
-            return items[indexPath.row] as? NSDictionary
+            if let dictionary = items[indexPath.row] as? NSDictionary {
+                switch (dictionary["title"], dictionary["subtitle"]) {
+                case (.Some(let title as String), .Some(let subtitle as String)):
+                    return Cocktail(title: title, subtitle: subtitle)
+                default:
+                    return nil
+                }
+            }
         }
         return nil
     }
@@ -54,8 +61,8 @@ class CoctailsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         let cocktail = cocktailAtIndexPath(indexPath)
-        cell.textLabel?.text = cocktail?["title"] as? String
-        cell.detailTextLabel?.text = cocktail?["subtitle"] as? String
+        cell.textLabel?.text = cocktail?.title
+        cell.detailTextLabel?.text = cocktail?.subtitle
         return cell
     }
     
