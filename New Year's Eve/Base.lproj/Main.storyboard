@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="1448" y="-150"/>
         </scene>
-        <!--Detail-->
+        <!--View Controller-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
                 <viewController id="JEX-9P-axG" sceneMemberID="viewController">
@@ -249,7 +249,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
