@@ -21,14 +21,32 @@ class CoctailsTableViewController: UITableViewController {
         return nil
     }()
     
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+        title = "New Year’s Eve"
+    }
+    
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		title = "Cocktails"
         tableView?.estimatedRowHeight = 54
         tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.contentInset = UIEdgeInsetsMake(10, 0, 0, 0)
+        tableView?.registerClass(TableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "Header")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        
+        if let navigationController = segue.destinationViewController as? UINavigationController {
+            if let viewController = navigationController.topViewController as? CocktailViewController {
+                if let indexPath = tableView.indexPathForSelectedRow() {
+                    viewController.cocktail = cocktailAtIndexPath(indexPath)
+                }
+            }
+        }
     }
     
     
@@ -47,6 +65,15 @@ class CoctailsTableViewController: UITableViewController {
         if let items = itemsInSection(indexPath.section) {
             if let dictionary = items[indexPath.row] as? NSDictionary {
                 return Cocktail(dictionary: dictionary)
+            }
+        }
+        return nil
+    }
+    
+    private func titleForSectionAtIndex(section: Int) -> String? {
+        if let value = data {
+            if let dictionary = value[section] as? NSDictionary {
+                return dictionary["title"] as? String
             }
         }
         return nil
@@ -70,25 +97,21 @@ class CoctailsTableViewController: UITableViewController {
         cell.subtitleLabel?.text = cocktail?.subtitle
         return cell
     }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let value = data {
-            if let dictionary = value[section] as? NSDictionary {
-                return dictionary["title"] as? String
-            }
+
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let title = titleForSectionAtIndex(section) {
+            let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as TableViewHeaderView
+            view.titleLabel.text = title.uppercaseString
+            return view
         }
         return nil
     }
-
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		super.prepareForSegue(segue, sender: sender)
-
-		if let navigationController = segue.destinationViewController as? UINavigationController {
-			if let viewController = navigationController.topViewController as? CocktailViewController {
-				if let indexPath = tableView.indexPathForSelectedRow() {
-					viewController.cocktail = cocktailAtIndexPath(indexPath)
-				}
-			}
-		}
-	}
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 54
+    }
 }
