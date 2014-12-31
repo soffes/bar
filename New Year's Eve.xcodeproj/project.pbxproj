@@ -12,6 +12,7 @@
 		2161A4251A5467DE00757E67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161A4231A5467DE00757E67 /* Main.storyboard */; };
 		2161A4271A5467DE00757E67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2161A4261A5467DE00757E67 /* Images.xcassets */; };
 		2161A42A1A5467DE00757E67 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2161A4281A5467DE00757E67 /* LaunchScreen.xib */; };
+		217966851A547F5F00189A86 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217966841A547F5F00189A86 /* RecipeViewController.swift */; };
 		3B7C3A831A546E7E00AEABD1 /* SpiritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */; };
 		3B7C3A851A546E8C00AEABD1 /* CoctailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A841A546E8C00AEABD1 /* CoctailsTableViewController.swift */; };
 		3B7C3A871A546EAA00AEABD1 /* DrinkTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */; };
@@ -24,11 +25,11 @@
 		2161A4181A5467DE00757E67 /* New Year's Eve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Year's Eve.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2161A41C1A5467DE00757E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2161A41D1A5467DE00757E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2161A41F1A5467DE00757E67 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		2161A4211A5467DE00757E67 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2161A4241A5467DE00757E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2161A4261A5467DE00757E67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2161A4291A5467DE00757E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		217966841A547F5F00189A86 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritsTableViewController.swift; sourceTree = "<group>"; };
 		3B7C3A841A546E8C00AEABD1 /* CoctailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoctailsTableViewController.swift; sourceTree = "<group>"; };
 		3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTypeTableViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 				3B7C3A891A5470F800AEABD1 /* Models */,
 				3B7C3A811A546E6600AEABD1 /* View Controllers */,
 				3B7C3AA21A54783400AEABD1 /* Data */,
-				2161A41F1A5467DE00757E67 /* MasterViewController.swift */,
 				2161A4211A5467DE00757E67 /* DetailViewController.swift */,
 				2161A4231A5467DE00757E67 /* Main.storyboard */,
 				2161A4261A5467DE00757E67 /* Images.xcassets */,
@@ -93,8 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				3B7C3A861A546EAA00AEABD1 /* DrinkTypeTableViewController.swift */,
-				3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */,
 				3B7C3A841A546E8C00AEABD1 /* CoctailsTableViewController.swift */,
+				3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */,
+				217966841A547F5F00189A86 /* RecipeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -183,6 +184,7 @@
 				3B7C3A871A546EAA00AEABD1 /* DrinkTypeTableViewController.swift in Sources */,
 				3B7C3A831A546E7E00AEABD1 /* SpiritsTableViewController.swift in Sources */,
 				2161A4221A5467DE00757E67 /* DetailViewController.swift in Sources */,
+				217966851A547F5F00189A86 /* RecipeViewController.swift in Sources */,
 				3B7C3A851A546E8C00AEABD1 /* CoctailsTableViewController.swift in Sources */,
 				3B7C3A8B1A54710700AEABD1 /* Spirit.swift in Sources */,
 				2161A41E1A5467DE00757E67 /* AppDelegate.swift in Sources */,

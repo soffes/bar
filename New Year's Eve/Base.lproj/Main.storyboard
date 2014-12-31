@@ -106,6 +106,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mjd-S4-2WW" kind="showDetail" id="AdH-QD-kES"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -118,6 +121,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45S-jE-Oyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1448" y="-848"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kjg-I9-tGM">
+            <objects>
+                <navigationController id="mjd-S4-2WW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bXw-kQ-eOU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="66Y-Id-Xa5" kind="relationship" relationship="rootViewController" id="TXu-sb-IL6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0p-rh-JE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="-848"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="Heg-If-pfo">
+            <objects>
+                <viewController id="66Y-Id-Xa5" customClass="RecipeViewController" customModule="NYE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UHL-OJ-vtl"/>
+                        <viewControllerLayoutGuide type="bottom" id="HGA-T2-GRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mn5-XV-U4x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="adO-VL-4xD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpg-fe-vic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800" y="-848"/>
         </scene>
         <!--Spirits-->
         <scene sceneID="dio-Dr-g4j">

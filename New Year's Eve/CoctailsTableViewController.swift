@@ -69,4 +69,16 @@ class CoctailsTableViewController: UITableViewController {
         }
         return nil
     }
+
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		super.prepareForSegue(segue, sender: sender)
+
+		if let navigationController = segue.destinationViewController as? UINavigationController {
+			if let viewController = navigationController.topViewController as? RecipeViewController {
+				if let indexPath = tableView.indexPathForSelectedRow() {
+					viewController.cocktail = cocktailAtIndexPath(indexPath)
+				}
+			}
+		}
+	}
 }
