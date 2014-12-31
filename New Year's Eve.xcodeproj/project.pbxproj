@@ -10,7 +10,6 @@
 		2161A41E1A5467DE00757E67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161A41D1A5467DE00757E67 /* AppDelegate.swift */; };
 		2161A4251A5467DE00757E67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161A4231A5467DE00757E67 /* Main.storyboard */; };
 		2161A4271A5467DE00757E67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2161A4261A5467DE00757E67 /* Images.xcassets */; };
-		2161A42A1A5467DE00757E67 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2161A4281A5467DE00757E67 /* LaunchScreen.xib */; };
 		217966851A547F5F00189A86 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217966841A547F5F00189A86 /* CocktailViewController.swift */; };
 		3B18D0061A548C610068E53A /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18D0051A548C610068E53A /* TableViewHeaderView.swift */; };
 		3B7C3A831A546E7E00AEABD1 /* SpiritsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */; };
@@ -28,7 +27,6 @@
 		2161A41D1A5467DE00757E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2161A4241A5467DE00757E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2161A4261A5467DE00757E67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2161A4291A5467DE00757E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		217966841A547F5F00189A86 /* CocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
 		3B18D0051A548C610068E53A /* TableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
 		3B7C3A821A546E7E00AEABD1 /* SpiritsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritsTableViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 			children = (
 				2161A4231A5467DE00757E67 /* Main.storyboard */,
 				2161A4261A5467DE00757E67 /* Images.xcassets */,
-				2161A4281A5467DE00757E67 /* LaunchScreen.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -186,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2161A4251A5467DE00757E67 /* Main.storyboard in Resources */,
-				2161A42A1A5467DE00757E67 /* LaunchScreen.xib in Resources */,
 				3B7C3AA31A54783400AEABD1 /* Data in Resources */,
 				2161A4271A5467DE00757E67 /* Images.xcassets in Resources */,
 			);
@@ -220,14 +216,6 @@
 				2161A4241A5467DE00757E67 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2161A4281A5467DE00757E67 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2161A4291A5467DE00757E67 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "New Year's Eve/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -326,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Nothing Magical Inc.";
 				INFOPLIST_FILE = "New Year's Eve/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
