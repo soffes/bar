@@ -1,6 +1,6 @@
 # New Year’s Eve
 
-iOS for New Year’s Eve party.
+iOS for New Year’s Eve party. It's the menu for my home bar. Guests used to get more details about drinks written on my whiteboard wall, and I used it to remember all of the recipes.
 
 Engineering by [Caleb Davenport](https://twitter.com/calebd) & [Sam Soffes](https://twitter.com/soffes). Icon by [Louie Mantia](https://twitter.com/mantia).
 
