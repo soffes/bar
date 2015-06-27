@@ -72,14 +72,14 @@ class SpiritsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel?.text = spiritAtIndexPath(indexPath)
         return cell
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let title = titleForSectionAtIndex(section) {
-            let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as TableViewHeaderView
+            let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! TableViewHeaderView
             view.titleLabel.text = title.uppercaseString
             return view
         }

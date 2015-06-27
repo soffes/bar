@@ -16,7 +16,7 @@ struct Cocktail {
     let subtitle: String
 	var recipe: String? {
 		if let url = NSBundle.mainBundle().URLForResource(title, withExtension: "txt", subdirectory: "Data") {
-			return NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding, error: nil)
+			return NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding, error: nil) as? String
 		}
 		return nil
 	}
