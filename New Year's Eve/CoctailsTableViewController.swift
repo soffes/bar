@@ -101,12 +101,12 @@ class CoctailsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == numberOfSections - 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("PlainCell", forIndexPath: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("PlainCell", forIndexPath: indexPath) as! UITableViewCell
             cell.textLabel?.text = "Spirits"
             return cell
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("CocktailCell", forIndexPath: indexPath) as CocktailTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CocktailCell", forIndexPath: indexPath) as! CocktailTableViewCell
         let cocktail = cocktailAtIndexPath(indexPath)
         cell.titleLabel?.text = cocktail?.title
         cell.subtitleLabel?.text = cocktail?.subtitle
@@ -119,7 +119,7 @@ class CoctailsTableViewController: UITableViewController {
         }
         
         if let title = titleForSectionAtIndex(section) {
-            let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as TableViewHeaderView
+            let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! TableViewHeaderView
             view.titleLabel.text = title.uppercaseString
             return view
         }
