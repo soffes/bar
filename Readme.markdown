@@ -9,3 +9,7 @@ Recipes from [Death & Co](http://www.amazon.com/gp/product/1607745259/ref=as_li_
 ![Icon](New Year's Eve/Images.xcassets/AppIcon.appiconset/Menu-120.png)
 
 ![Screenshot](Screenshot.png)
+
+## Building
+
+Xcode 7b3 is required. You'll need to get Bar's dependencies with [Carthage](https://github.com/carthage/carthage).
