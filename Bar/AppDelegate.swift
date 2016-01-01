@@ -32,7 +32,12 @@ class AppDelegate: UIResponder {
 
 extension AppDelegate: UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		application.idleTimerDisabled = true
 		window?.makeKeyAndVisible()
 		return true
+	}
+
+	func applicationDidBecomeActive(application: UIApplication) {
+		application.idleTimerDisabled = true
 	}
 }
