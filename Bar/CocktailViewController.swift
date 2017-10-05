@@ -69,7 +69,7 @@ final class CocktailViewController: UIViewController {
 
                 self?.textView.attributedText = NSAttributedString(string: text, attributes: [
                     .paragraphStyle: style,
-                    .font: UIFont.systemFont(ofSize: 16)
+                    .font: UIFont.systemFont(ofSize: 18)
                 ])
 			}
 		}
