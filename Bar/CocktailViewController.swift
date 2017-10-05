@@ -8,12 +8,13 @@
 
 import UIKit
 
-class CocktailViewController: UIViewController {
+final class CocktailViewController: UIViewController {
 
 	// MARK: - Properties
 
 	let cocktail: Cocktail
-	fileprivate let textView: UITextView = {
+    
+	private let textView: UITextView = {
 		let textView = UITextView()
 		textView.translatesAutoresizingMaskIntoConstraints = false
 		textView.isEditable = false
@@ -30,6 +31,10 @@ class CocktailViewController: UIViewController {
 		super.init(nibName: nil, bundle: nil)
 
 		title = cocktail.title
+        
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .never
+        }
 	}
 
 	required init(coder aDecoder: NSCoder) {
@@ -46,9 +51,12 @@ class CocktailViewController: UIViewController {
 
 		view.addSubview(textView)
         
-		let views = [ "textView": textView ]
-		view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[textView]|", options: [], metrics: nil, views: views))
-		view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textView]|", options: [], metrics: nil, views: views))
+        NSLayoutConstraint.activate([
+            textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
 			guard let text = self?.cocktail.loadRecipe() else {

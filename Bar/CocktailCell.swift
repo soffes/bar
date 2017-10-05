@@ -9,7 +9,7 @@
 import UIKit
 import Static
 
-class CocktailCell: UITableViewCell, Cell {
+final class CocktailCell: UITableViewCell, Cell {
 
 	// MARK: - Initializers
 	
@@ -26,7 +26,7 @@ class CocktailCell: UITableViewCell, Cell {
 
 	// MARK: - Private
 
-	fileprivate func initialize() {
+	private func initialize() {
 		guard let textLabel = textLabel, let detailTextLabel = detailTextLabel else { return }
 
 		textLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -39,18 +39,17 @@ class CocktailCell: UITableViewCell, Cell {
 
 		contentView.removeConstraints(textLabel.constraints)
 		contentView.removeConstraints(detailTextLabel.constraints)
-
-		let views = [
-			"textLabel": textLabel,
-			"detailTextLabel": detailTextLabel
-		]
-
-		let metrics = [
-			"margin": 16,
-		]
-
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-margin-[textLabel]-margin-|", options: [], metrics: metrics, views: views))
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-margin-[detailTextLabel]-margin-|", options: [], metrics: metrics, views: views))
-		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-margin-[textLabel]-4-[detailTextLabel]-margin-|", options: [], metrics: metrics, views: views))
+        contentView.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        
+        NSLayoutConstraint.activate([
+            textLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            textLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+            textLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            
+            detailTextLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            detailTextLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+            detailTextLabel.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 4),
+            detailTextLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
+        ])
 	}
 }

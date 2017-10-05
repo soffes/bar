@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder {
+final class AppDelegate: UIResponder {
 
 	// MARK: - Properties
 
@@ -17,14 +17,10 @@ class AppDelegate: UIResponder {
 		let window = UIWindow()
 		window.tintColor = UIColor(red: 0.8, green: 0.271, blue: 0.216, alpha: 1)
 
-//		let splitViewController = UISplitViewController()
-//		splitViewController.viewControllers = [
-//			UINavigationController(rootViewController: UIViewController()),
-//			UINavigationController(rootViewController: UIViewController())
-//		]
-//		window.rootViewController = splitViewController
-
-		window.rootViewController = UINavigationController(rootViewController: MenuViewController())
+		let viewController = UINavigationController(rootViewController: MenuViewController())
+        viewController.navigationBar.prefersLargeTitles = true
+        window.rootViewController = viewController
+        
 		return window
 	}()
 }
