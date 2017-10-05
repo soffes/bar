@@ -15,14 +15,6 @@ struct Cocktail {
 	let title: String
 	let subtitle: String
 
-	var recipe: String? {
-		guard let path = Bundle.main.path(forResource: title, ofType: "txt", inDirectory: "Data") else { return nil }
-		do {
-			return try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-		} catch {}
-		return nil
-	}
-
 
 	// MARK: - Initializers
 
@@ -31,4 +23,12 @@ struct Cocktail {
 		self.title = title
 		self.subtitle = subtitle
 	}
+    
+    
+    // MARK: - Loading Recipies
+    
+    func loadRecipe() -> String? {
+        let path = Bundle.main.path(forResource: title, ofType: "txt", inDirectory: "Data")
+        return path.flatMap { try? String(contentsOfFile: $0, encoding: .utf8) }
+    }
 }

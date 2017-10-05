@@ -17,7 +17,6 @@ class CocktailViewController: UIViewController {
 		let textView = UITextView()
 		textView.translatesAutoresizingMaskIntoConstraints = false
 		textView.isEditable = false
-		textView.font = UIFont.systemFont(ofSize: 16)
 		textView.textContainerInset = UIEdgeInsetsMake(16, 16, 16, 16)
 		textView.alwaysBounceVertical = true
 		return textView
@@ -46,24 +45,24 @@ class CocktailViewController: UIViewController {
 		view.backgroundColor = .white
 
 		view.addSubview(textView)
-
+        
 		let views = [ "textView": textView ]
 		view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[textView]|", options: [], metrics: nil, views: views))
 		view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textView]|", options: [], metrics: nil, views: views))
-
-		DispatchQueue.global(qos: .userInitiated).async {
-			if let text = self.cocktail.recipe {
+        
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+			guard let text = self?.cocktail.loadRecipe() else {
+                return
+            }
+            
+            DispatchQueue.main.async {
 				let style = NSMutableParagraphStyle()
 				style.lineHeightMultiple = 1.2
 
-				let string = NSAttributedString(string: text, attributes: [
-					NSParagraphStyleAttributeName: style,
-					NSFontAttributeName: self.textView.font!
-				])
-
-				DispatchQueue.main.async {
-					self.textView.attributedText = string
-				}
+                self?.textView.attributedText = NSAttributedString(string: text, attributes: [
+                    .paragraphStyle: style,
+                    .font: UIFont.systemFont(ofSize: 16)
+                ])
 			}
 		}
 	}
