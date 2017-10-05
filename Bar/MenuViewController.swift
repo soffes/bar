@@ -14,7 +14,7 @@ class MenuViewController: TableViewController {
 	// MARK: - Initializers
 
 	convenience init() {
-		self.init(style: .Grouped)
+		self.init(style: .grouped)
 	}
 
 
@@ -27,7 +27,7 @@ class MenuViewController: TableViewController {
 
 		tableView.estimatedRowHeight = 100
 
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)) {
+		DispatchQueue.global(qos: .userInitiated).async {
 			self.reloadData()
 		}
 	}
@@ -35,11 +35,11 @@ class MenuViewController: TableViewController {
 
 	// MARK: - Private
 
-	private func reloadData() {
+	fileprivate func reloadData() {
 		let array: [[String: AnyObject]]
 		do {
-			guard let path = NSBundle.mainBundle().pathForResource("Cocktails", ofType: "json", inDirectory: "Data"), data = NSData(contentsOfFile: path) else { return }
-			guard let contents = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [[String: AnyObject]] else { return }
+			guard let path = Bundle.main.path(forResource: "Cocktails", ofType: "json", inDirectory: "Data"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return }
+			guard let contents = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: AnyObject]] else { return }
 			array = contents
 		} catch {
 			return
@@ -50,15 +50,15 @@ class MenuViewController: TableViewController {
 			var section = Section(rows: [])
 
 			if let title = dictionary["title"] as? String {
-				section.header = .Title(title)
+				section.header = .title(title)
 			}
 
 			if let items = dictionary["items"] as? [[String: String]] {
 				for item in items {
 					if let cocktail = Cocktail(dictionary: item) {
-						section.rows.append(Row(text: cocktail.title, detailText: cocktail.subtitle, accessory: .DisclosureIndicator, selection: {
+						section.rows.append(Row(text: cocktail.title, detailText: cocktail.subtitle, selection: {
 							self.didSelectCocktail(cocktail)
-						}, cellClass: CocktailCell.self))
+						}, accessory: .disclosureIndicator, cellClass: CocktailCell.self))
 					}
 				}
 			}
@@ -66,12 +66,12 @@ class MenuViewController: TableViewController {
 			sections.append(section)
 		}
 
-		dispatch_async(dispatch_get_main_queue()) {
+		DispatchQueue.main.async {
 			self.dataSource.sections = sections
 		}
 	}
 
-	private func didSelectCocktail(cocktail: Cocktail) {
+	fileprivate func didSelectCocktail(_ cocktail: Cocktail) {
 		let viewController = CocktailViewController(cocktail: cocktail)
 		navigationController?.pushViewController(viewController, animated: true)
 	}

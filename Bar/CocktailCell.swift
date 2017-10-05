@@ -9,12 +9,12 @@
 import UIKit
 import Static
 
-class CocktailCell: UITableViewCell, CellType {
+class CocktailCell: UITableViewCell, Cell {
 
 	// MARK: - Initializers
 	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-		super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
+		super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
 		initialize()
 	}
 
@@ -26,14 +26,14 @@ class CocktailCell: UITableViewCell, CellType {
 
 	// MARK: - Private
 
-	private func initialize() {
-		guard let textLabel = textLabel, detailTextLabel = detailTextLabel else { return }
+	fileprivate func initialize() {
+		guard let textLabel = textLabel, let detailTextLabel = detailTextLabel else { return }
 
 		textLabel.translatesAutoresizingMaskIntoConstraints = false
 		textLabel.font = UIFont(name: "Georgia", size: 20)
 
 		detailTextLabel.translatesAutoresizingMaskIntoConstraints = false
-		detailTextLabel.font = UIFont.systemFontOfSize(14)
+		detailTextLabel.font = UIFont.systemFont(ofSize: 14)
 		detailTextLabel.numberOfLines = 3
 		detailTextLabel.textColor = UIColor(white: 0.6, alpha: 1)
 
@@ -49,8 +49,8 @@ class CocktailCell: UITableViewCell, CellType {
 			"margin": 16,
 		]
 
-		contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-margin-[textLabel]-margin-|", options: [], metrics: metrics, views: views))
-		contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-margin-[detailTextLabel]-margin-|", options: [], metrics: metrics, views: views))
-		contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-margin-[textLabel]-4-[detailTextLabel]-margin-|", options: [], metrics: metrics, views: views))
+		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-margin-[textLabel]-margin-|", options: [], metrics: metrics, views: views))
+		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-margin-[detailTextLabel]-margin-|", options: [], metrics: metrics, views: views))
+		contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-margin-[textLabel]-4-[detailTextLabel]-margin-|", options: [], metrics: metrics, views: views))
 	}
 }

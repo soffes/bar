@@ -16,9 +16,9 @@ struct Cocktail {
 	let subtitle: String
 
 	var recipe: String? {
-		guard let path = NSBundle.mainBundle().pathForResource(title, ofType: "txt", inDirectory: "Data") else { return nil }
+		guard let path = Bundle.main.path(forResource: title, ofType: "txt", inDirectory: "Data") else { return nil }
 		do {
-			return try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+			return try String(contentsOfFile: path, encoding: String.Encoding.utf8)
 		} catch {}
 		return nil
 	}
@@ -27,7 +27,7 @@ struct Cocktail {
 	// MARK: - Initializers
 
 	init?(dictionary: [String: String]) {
-		guard let title = dictionary["title"], subtitle = dictionary["subtitle"] else { return nil }
+		guard let title = dictionary["title"], let subtitle = dictionary["subtitle"] else { return nil }
 		self.title = title
 		self.subtitle = subtitle
 	}

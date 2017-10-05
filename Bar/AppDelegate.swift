@@ -31,13 +31,13 @@ class AppDelegate: UIResponder {
 
 
 extension AppDelegate: UIApplicationDelegate {
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		application.idleTimerDisabled = true
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		application.isIdleTimerDisabled = true
 		window?.makeKeyAndVisible()
 		return true
 	}
 
-	func applicationDidBecomeActive(application: UIApplication) {
-		application.idleTimerDisabled = true
+	func applicationDidBecomeActive(_ application: UIApplication) {
+		application.isIdleTimerDisabled = true
 	}
 }

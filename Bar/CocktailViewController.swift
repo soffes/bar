@@ -13,11 +13,11 @@ class CocktailViewController: UIViewController {
 	// MARK: - Properties
 
 	let cocktail: Cocktail
-	private let textView: UITextView = {
+	fileprivate let textView: UITextView = {
 		let textView = UITextView()
 		textView.translatesAutoresizingMaskIntoConstraints = false
-		textView.editable = false
-		textView.font = UIFont.systemFontOfSize(16)
+		textView.isEditable = false
+		textView.font = UIFont.systemFont(ofSize: 16)
 		textView.textContainerInset = UIEdgeInsetsMake(16, 16, 16, 16)
 		textView.alwaysBounceVertical = true
 		return textView
@@ -43,15 +43,15 @@ class CocktailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		view.backgroundColor = .whiteColor()
+		view.backgroundColor = .white
 
 		view.addSubview(textView)
 
 		let views = [ "textView": textView ]
-		view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|[textView]|", options: [], metrics: nil, views: views))
-		view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[textView]|", options: [], metrics: nil, views: views))
+		view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[textView]|", options: [], metrics: nil, views: views))
+		view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textView]|", options: [], metrics: nil, views: views))
 
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
+		DispatchQueue.global(qos: .userInitiated).async {
 			if let text = self.cocktail.recipe {
 				let style = NSMutableParagraphStyle()
 				style.lineHeightMultiple = 1.2
@@ -61,14 +61,14 @@ class CocktailViewController: UIViewController {
 					NSFontAttributeName: self.textView.font!
 				])
 
-				dispatch_async(dispatch_get_main_queue()) {
+				DispatchQueue.main.async {
 					self.textView.attributedText = string
 				}
 			}
 		}
 	}
 
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		textView.flashScrollIndicators()
 	}
