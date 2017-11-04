@@ -15,12 +15,13 @@ final class CocktailViewController: UIViewController {
 	let cocktail: Cocktail
     
 	private let textView: UITextView = {
-		let textView = UITextView()
-		textView.translatesAutoresizingMaskIntoConstraints = false
-		textView.isEditable = false
-		textView.textContainerInset = UIEdgeInsetsMake(16, 16, 16, 16)
-		textView.alwaysBounceVertical = true
-		return textView
+		let view = UITextView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.isEditable = false
+		view.textContainerInset = UIEdgeInsetsMake(16, 16, 16, 16)
+		view.alwaysBounceVertical = true
+		view.backgroundColor = .black
+		return view
 	}()
 
 
@@ -47,7 +48,7 @@ final class CocktailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		view.backgroundColor = .white
+		view.backgroundColor = .black
 
 		view.addSubview(textView)
         
@@ -69,7 +70,8 @@ final class CocktailViewController: UIViewController {
 
                 self?.textView.attributedText = NSAttributedString(string: text, attributes: [
                     .paragraphStyle: style,
-                    .font: UIFont.systemFont(ofSize: 18)
+					.font: UIFont.systemFont(ofSize: 18, weight: .medium),
+					.foregroundColor: UIColor.white
                 ])
 			}
 		}

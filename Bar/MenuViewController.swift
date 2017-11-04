@@ -26,6 +26,8 @@ class MenuViewController: TableViewController {
 		title = "Menu"
 
 		tableView.estimatedRowHeight = 100
+		tableView.backgroundColor = .black
+		tableView.separatorColor = UIColor(white: 0.2, alpha: 1)
 
 		DispatchQueue.global(qos: .userInitiated).async {
 			self.reloadData()

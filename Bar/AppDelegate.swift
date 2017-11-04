@@ -15,10 +15,11 @@ final class AppDelegate: UIResponder {
 
 	var window: UIWindow? = {
 		let window = UIWindow()
-		window.tintColor = UIColor(red: 0.8, green: 0.271, blue: 0.216, alpha: 1)
+		window.tintColor = UIColor(displayP3Red: 1, green: 0.27, blue: 0.21, alpha: 1)
 
 		let viewController = UINavigationController(rootViewController: MenuViewController())
         viewController.navigationBar.prefersLargeTitles = true
+		viewController.navigationBar.barStyle = .blackTranslucent
         window.rootViewController = viewController
         
 		return window
