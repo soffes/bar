@@ -45,14 +45,6 @@
         "title": "Vesper Martini",
         "subtitle": "James Bond’s drink of choice. Gordon’s, vodka, Kina Lillet. Shaken, not stirred."
       },
-      {
-        "title": "Sidecar",
-        "subtitle": "Pierre Ferrand 1840 Cognac, Cointreau, lemon juice, homemade cane sugar syrup."
-      },
-      {
-        "title": "Mint Julep",
-        "subtitle": "Classic Kentucky Derby libation. Baker’s bourbon served with a mint bouquet in a copper tin."
-      }
     ]
   },
   {
@@ -71,19 +63,6 @@
         "subtitle": "Jose Cuervo Tequila and margarita mix. Blended with ice for frozen deliciousness."
       },
       {
-        "id": "Pina Colada",
-        "title": "Piña Colada",
-        "subtitle": "Malibu Coconut rum, pineapple juice, and cream. Blended to island perfection."
-      },
-      {
-        "title": "Martini",
-        "subtitle": "Grey Goose vodka or Tanqueray gin with extra dry vermouth served with stuffed green olives."
-      },
-      {
-        "title": "Hot Apple Toddy",
-        "subtitle": "Bulleitt bourbon, hot apple cider, honey, lemon wedge, and a cinnamon stick."
-      },
-      {
         "title": "Rum & Coke",
         "subtitle": "Bacardi rum mixed with Mexican Coca-Cola. It’s hard to go wrong with this one."
       },
@@ -97,4 +76,30 @@
       }
     ]
   },
+  {
+    "title": "Retired Cocktails",
+    "items": [
+      {
+        "title": "Martini",
+        "subtitle": "Grey Goose vodka or Tanqueray gin with extra dry vermouth served with stuffed green olives."
+      },
+      {
+        "title": "Hot Apple Toddy",
+        "subtitle": "Bulleitt bourbon, hot apple cider, honey, lemon wedge, and a cinnamon stick."
+      },
+      {
+        "title": "Sidecar",
+        "subtitle": "Pierre Ferrand 1840 Cognac, Cointreau, lemon juice, homemade cane sugar syrup."
+      },
+      {
+        "title": "Mint Julep",
+        "subtitle": "Classic Kentucky Derby libation. Baker’s bourbon served with a mint bouquet in a copper tin."
+      },
+      {
+        "id": "Pina Colada",
+        "title": "Piña Colada",
+        "subtitle": "Malibu Coconut rum, pineapple juice, and cream. Blended to island perfection."
+      }
+    ]
+  }
 ]
