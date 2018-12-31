@@ -18,7 +18,7 @@ final class CocktailViewController: UIViewController {
 		let view = UITextView()
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.isEditable = false
-		view.textContainerInset = UIEdgeInsetsMake(16, 16, 16, 16)
+        view.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 		view.alwaysBounceVertical = true
 		view.backgroundColor = .black
 		return view

@@ -13,7 +13,7 @@ final class CocktailCell: UITableViewCell, Cell {
 
 	// MARK: - Initializers
 	
-	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
 
 		backgroundColor = UIColor(white: 0.05, alpha: 1)
