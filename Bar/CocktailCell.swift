@@ -1,11 +1,3 @@
-//
-//  CocktailCell.swift
-//  Bar
-//
-//  Created by Sam Soffes on 6/27/15.
-//  Copyright © 2015 Sam Soffes. All rights reserved.
-//
-
 import UIKit
 import Static
 
