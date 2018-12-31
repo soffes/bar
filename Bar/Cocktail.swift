@@ -4,6 +4,7 @@ struct Cocktail {
 
 	// MARK: - Properties
 
+    let id: String
 	let title: String
 	let subtitle: String
 
@@ -12,6 +13,7 @@ struct Cocktail {
 
 	init?(dictionary: [String: String]) {
 		guard let title = dictionary["title"], let subtitle = dictionary["subtitle"] else { return nil }
+        self.id = dictionary["id"] ?? title
 		self.title = title
 		self.subtitle = subtitle
 	}
@@ -20,7 +22,7 @@ struct Cocktail {
     // MARK: - Loading Recipies
     
     func loadRecipe() -> String? {
-        let path = Bundle.main.path(forResource: title, ofType: "txt", inDirectory: "Data")
+        let path = Bundle.main.path(forResource: id, ofType: "txt", inDirectory: "Data")
         return path.flatMap { try? String(contentsOfFile: $0, encoding: .utf8) }
     }
 }
