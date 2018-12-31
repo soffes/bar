@@ -13,6 +13,7 @@ final class CocktailViewController: UIViewController {
         view.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 		view.alwaysBounceVertical = true
 		view.backgroundColor = .black
+        view.indicatorStyle = .white
 		return view
 	}()
 
