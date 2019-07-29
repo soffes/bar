@@ -4,11 +4,13 @@ struct CocktailView: View {
     @State var cocktail: Cocktail
 
     var body: some View {
-        Text(cocktail.recipe ?? "Failed to load")
-            .lineLimit(nil)
-            .multilineTextAlignment(.leading)
-            .font(.body)
-            .padding()
+        ScrollView {
+            Text(cocktail.recipe ?? "Failed to load")
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+                .font(.body)
+                .padding()
+        }
         .navigationBarTitle(cocktail.title)
     }
 }
