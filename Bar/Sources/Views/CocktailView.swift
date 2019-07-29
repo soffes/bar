@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct CocktailView: View {
-    @State var title: String
-    @State var recipe: String
+    @State var cocktail: Cocktail
 
     var body: some View {
-        Text(recipe)
-            .lineLimit(0)
+        Text(cocktail.recipe ?? "Failed to load")
+            .lineLimit(nil)
             .multilineTextAlignment(.leading)
             .font(.body)
-            .navigationBarTitle(title)
+            .padding()
+        .navigationBarTitle(cocktail.title)
     }
 }
 
@@ -17,7 +17,7 @@ struct CocktailView: View {
 struct CocktailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CocktailView(title: "Old Fashioned", recipe: "Hello")
+            CocktailView(cocktail: .sample)
         }
     }
 }

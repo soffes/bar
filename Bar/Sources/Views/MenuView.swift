@@ -1,20 +1,31 @@
 import SwiftUI
 
 struct MenuView: View {
-    let menu: [MenuSection]
+    @State var sections: [MenuSection]
+
     var body: some View {
         List {
-            Section(header: Text("Sam’s Favorite")) {
-                CocktailCell(title: "Old Fashioned", description: "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange.")
+            ForEach(sections, id: \.title) { section in
+                Section(header: Text(section.title)) {
+                    ForEach(section.cocktails, id: \.identifier) { cocktail in
+                        NavigationLink(destination: CocktailView(cocktail: cocktail)) {
+                            CocktailCell(cocktail: cocktail)
+                        }
+                    }
+                }
             }
         }
+        .listStyle(.grouped)
+        .navigationBarTitle("Menu")
     }
 }
 
 #if DEBUG
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        NavigationView {
+            MenuView(sections: [.sample])
+        }
     }
 }
 #endif

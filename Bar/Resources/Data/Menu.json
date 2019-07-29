@@ -5,7 +5,7 @@
       {
         "identifier": "OldFashioned",
         "title": "Old Fashioned",
-        "subtitle": "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange."
+        "description": "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange."
       }
     ]
   },
@@ -15,7 +15,7 @@
       {
         "identifier": "WhiskeySour",
         "title": "Whiskey Sour",
-        "subtitle": "Buffalo Trace bourbon, lemon juice, simple syrup, and optional egg white."
+        "description": "Buffalo Trace bourbon, lemon juice, simple syrup, and optional egg white."
       }
     ]
   },
@@ -25,7 +25,7 @@
       {
         "identifier": "ElectricLemonade",
         "title": "Electric Lemonade",
-        "subtitle": "Absolut Citron, Blue Curaçao, sweet & sour, and Sprite. Served with a glowing surprise."
+        "description": "Absolut Citron, Blue Curaçao, sweet & sour, and Sprite. Served with a glowing surprise."
       }
     ]
   },
@@ -35,22 +35,22 @@
       {
         "identifier": "Sazerac",
         "title": "Sazerac",
-        "subtitle": "Rittenhouse 100 Rye, Pierre Ferrand 1840 Cognac, bitters, lemon."
+        "description": "Rittenhouse 100 Rye, Pierre Ferrand 1840 Cognac, bitters, lemon."
       },
       {
         "identifier": "MoscowMule",
         "title": "Moscow Mule",
-        "subtitle": "Charbay Vodka, homemade ginger syrup, lime juice, club soda in copper tin."
+        "description": "Charbay Vodka, homemade ginger syrup, lime juice, club soda in copper tin."
       },
       {
         "identifier": "Cosmopolitan",
         "title": "Cosmopolitan",
-        "subtitle": "Grey Goose vodka, Cointreau, cranberry juice, lime juice. Sweet and delicious."
+        "description": "Grey Goose vodka, Cointreau, cranberry juice, lime juice. Sweet and delicious."
       },
       {
         "identifier": "Vesper Martini",
         "title": "Vesper Martini",
-        "subtitle": "James Bond’s drink of choice. Gordon’s, vodka, Kina Lillet. Shaken, not stirred."
+        "description": "James Bond’s drink of choice. Gordon’s, vodka, Kina Lillet. Shaken, not stirred."
       },
     ]
   },
@@ -60,32 +60,32 @@
       {
         "identifier": "Kamikaze",
         "title": "Kamikaze",
-        "subtitle": "Equal parts Grey Goose vodka, Cointreau, lime juice with lime spiral."
+        "description": "Equal parts Grey Goose vodka, Cointreau, lime juice with lime spiral."
       },
       {
         "identifier": "GinTonic",
         "title": "Gin & Tonic",
-        "subtitle": "Simply classic. Bombay gin with tonic service with a giant ice cube. No frills."
+        "description": "Simply classic. Bombay gin with tonic service with a giant ice cube. No frills."
       },
       {
         "identifier": "Margarita",
         "title": "Margarita",
-        "subtitle": "Jose Cuervo Tequila and margarita mix. Blended with ice for frozen deliciousness."
+        "description": "Jose Cuervo Tequila and margarita mix. Blended with ice for frozen deliciousness."
       },
       {
         "identifier": "RumCoke",
         "title": "Rum & Coke",
-        "subtitle": "Bacardi rum mixed with Mexican Coca-Cola. It’s hard to go wrong with this one."
+        "description": "Bacardi rum mixed with Mexican Coca-Cola. It’s hard to go wrong with this one."
       },
       {
         "identifier": "Screwdriver",
         "title": "Screwdriver",
-        "subtitle": "Odwalla orange juice and Absolut vodka stirred. Always refreshing."
+        "description": "Odwalla orange juice and Absolut vodka stirred. Always refreshing."
       },
       {
         "identifier": "ShirleyTemple",
         "title": "Shirley Temple",
-        "subtitle": "A sweet, nonalcholic delite. Sprite and homemade Grenadine. Ellen’s non-alcholic go to."
+        "description": "A sweet, nonalcholic delite. Sprite and homemade Grenadine. Ellen’s non-alcholic go to."
       }
     ]
   },
@@ -95,27 +95,27 @@
       {
         "identifier": "Martini",
         "title": "Martini",
-        "subtitle": "Grey Goose vodka or Tanqueray gin with extra dry vermouth served with stuffed green olives."
+        "description": "Grey Goose vodka or Tanqueray gin with extra dry vermouth served with stuffed green olives."
       },
       {
         "identifier": "HotAppleToddy",
         "title": "Hot Apple Toddy",
-        "subtitle": "Bulleitt bourbon, hot apple cider, honey, lemon wedge, and a cinnamon stick."
+        "description": "Bulleitt bourbon, hot apple cider, honey, lemon wedge, and a cinnamon stick."
       },
       {
         "identifier": "Sidecar",
         "title": "Sidecar",
-        "subtitle": "Pierre Ferrand 1840 Cognac, Cointreau, lemon juice, homemade cane sugar syrup."
+        "description": "Pierre Ferrand 1840 Cognac, Cointreau, lemon juice, homemade cane sugar syrup."
       },
       {
         "identifier": "MintJulep",
         "title": "Mint Julep",
-        "subtitle": "Classic Kentucky Derby libation. Baker’s bourbon served with a mint bouquet in a copper tin."
+        "description": "Classic Kentucky Derby libation. Baker’s bourbon served with a mint bouquet in a copper tin."
       },
       {
         "identifier": "PinaColada",
         "title": "Piña Colada",
-        "subtitle": "Malibu Coconut rum, pineapple juice, and cream. Blended to island perfection."
+        "description": "Malibu Coconut rum, pineapple juice, and cream. Blended to island perfection."
       }
     ]
   }

@@ -1,14 +1,13 @@
 import SwiftUI
 
 struct CocktailCell: View {
-    @State var title: String
-    @State var description: String
+    @State var cocktail: Cocktail
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(title)
+            Text(cocktail.title)
                 .font(.headline)
-            Text(description)
+            Text(cocktail.description)
                 .font(.subheadline)
                 .lineLimit(2)
         }
@@ -18,7 +17,7 @@ struct CocktailCell: View {
 #if DEBUG
 struct CocktailCell_Previews: PreviewProvider {
     static var previews: some View {
-        CocktailCell(title: "Old Fashioned", description: "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange.")
+        CocktailCell(cocktail: .sample)
     }
 }
 #endif

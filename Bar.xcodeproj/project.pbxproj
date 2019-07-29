@@ -18,7 +18,7 @@
 		215D19A322EEBFCF00C7CBF0 /* GinTonic.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D198122EEBFCF00C7CBF0 /* GinTonic.txt */; };
 		215D19A422EEBFCF00C7CBF0 /* HotAppleToddy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D198222EEBFCF00C7CBF0 /* HotAppleToddy.txt */; };
 		215D19A622EEBFCF00C7CBF0 /* WhiskeySour.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D198422EEBFCF00C7CBF0 /* WhiskeySour.txt */; };
-		215D19A722EEBFCF00C7CBF0 /* Cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 215D198522EEBFCF00C7CBF0 /* Cocktails.json */; };
+		215D19A722EEBFCF00C7CBF0 /* Menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 215D198522EEBFCF00C7CBF0 /* Menu.json */; };
 		215D19A822EEBFCF00C7CBF0 /* ElectricLemonade.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D198622EEBFCF00C7CBF0 /* ElectricLemonade.txt */; };
 		215D19A922EEBFCF00C7CBF0 /* RumCoke.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D198722EEBFCF00C7CBF0 /* RumCoke.txt */; };
 		215D19AA22EEBFCF00C7CBF0 /* VesperMartini.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D198822EEBFCF00C7CBF0 /* VesperMartini.txt */; };
@@ -49,7 +49,7 @@
 		215D198122EEBFCF00C7CBF0 /* GinTonic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GinTonic.txt; sourceTree = "<group>"; };
 		215D198222EEBFCF00C7CBF0 /* HotAppleToddy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HotAppleToddy.txt; sourceTree = "<group>"; };
 		215D198422EEBFCF00C7CBF0 /* WhiskeySour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WhiskeySour.txt; sourceTree = "<group>"; };
-		215D198522EEBFCF00C7CBF0 /* Cocktails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cocktails.json; sourceTree = "<group>"; };
+		215D198522EEBFCF00C7CBF0 /* Menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Menu.json; sourceTree = "<group>"; };
 		215D198622EEBFCF00C7CBF0 /* ElectricLemonade.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ElectricLemonade.txt; sourceTree = "<group>"; };
 		215D198722EEBFCF00C7CBF0 /* RumCoke.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RumCoke.txt; sourceTree = "<group>"; };
 		215D198822EEBFCF00C7CBF0 /* VesperMartini.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VesperMartini.txt; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		215D197A22EEBFCF00C7CBF0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				215D198522EEBFCF00C7CBF0 /* Cocktails.json */,
+				215D198522EEBFCF00C7CBF0 /* Menu.json */,
 				215D197E22EEBFCF00C7CBF0 /* Cosmopolitan.txt */,
 				215D198622EEBFCF00C7CBF0 /* ElectricLemonade.txt */,
 				215D198122EEBFCF00C7CBF0 /* GinTonic.txt */,
@@ -279,7 +279,7 @@
 				215D199C22EEBFCF00C7CBF0 /* LaunchScreen.storyboard in Resources */,
 				215D199F22EEBFCF00C7CBF0 /* ShirleyTemple.txt in Resources */,
 				215D19A222EEBFCF00C7CBF0 /* Kamikaze.txt in Resources */,
-				215D19A722EEBFCF00C7CBF0 /* Cocktails.json in Resources */,
+				215D19A722EEBFCF00C7CBF0 /* Menu.json in Resources */,
 				215D19A822EEBFCF00C7CBF0 /* ElectricLemonade.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
