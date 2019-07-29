@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		215D199B22EEBFCF00C7CBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215D197722EEBFCF00C7CBF0 /* Assets.xcassets */; };
-		215D199C22EEBFCF00C7CBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215D197822EEBFCF00C7CBF0 /* LaunchScreen.storyboard */; };
 		215D199D22EEBFCF00C7CBF0 /* Martini.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D197B22EEBFCF00C7CBF0 /* Martini.txt */; };
 		215D199E22EEBFCF00C7CBF0 /* PinaColada.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D197C22EEBFCF00C7CBF0 /* PinaColada.txt */; };
 		215D199F22EEBFCF00C7CBF0 /* ShirleyTemple.txt in Resources */ = {isa = PBXBuildFile; fileRef = 215D197D22EEBFCF00C7CBF0 /* ShirleyTemple.txt */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		215D197722EEBFCF00C7CBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		215D197922EEBFCF00C7CBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		215D197B22EEBFCF00C7CBF0 /* Martini.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Martini.txt; sourceTree = "<group>"; };
 		215D197C22EEBFCF00C7CBF0 /* PinaColada.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PinaColada.txt; sourceTree = "<group>"; };
 		215D197D22EEBFCF00C7CBF0 /* ShirleyTemple.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShirleyTemple.txt; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				215D197722EEBFCF00C7CBF0 /* Assets.xcassets */,
-				215D197822EEBFCF00C7CBF0 /* LaunchScreen.storyboard */,
 				215D197A22EEBFCF00C7CBF0 /* Data */,
 			);
 			name = Resources;
@@ -276,7 +273,6 @@
 				215D19A122EEBFCF00C7CBF0 /* OldFashioned.txt in Resources */,
 				215D19AA22EEBFCF00C7CBF0 /* VesperMartini.txt in Resources */,
 				215D19AD22EEBFCF00C7CBF0 /* Margarita.txt in Resources */,
-				215D199C22EEBFCF00C7CBF0 /* LaunchScreen.storyboard in Resources */,
 				215D199F22EEBFCF00C7CBF0 /* ShirleyTemple.txt in Resources */,
 				215D19A222EEBFCF00C7CBF0 /* Kamikaze.txt in Resources */,
 				215D19A722EEBFCF00C7CBF0 /* Menu.json in Resources */,
@@ -302,17 +298,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		215D197822EEBFCF00C7CBF0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				215D197922EEBFCF00C7CBF0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		219EFD3C22EEBDBF00C1E845 /* Debug */ = {
@@ -433,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = Bar/Support/PreviewContent;
 				DEVELOPMENT_TEAM = LHDXBG4XBK;
@@ -453,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = Bar/Support/PreviewContent;
 				DEVELOPMENT_TEAM = LHDXBG4XBK;
