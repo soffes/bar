@@ -1,23 +1,12 @@
 import Foundation
 
-struct Cocktail {
+struct Cocktail: Codable {
 
 	// MARK: - Properties
 
     let id: String
 	let title: String
 	let subtitle: String
-
-
-	// MARK: - Initializers
-
-	init?(dictionary: [String: String]) {
-		guard let title = dictionary["title"], let subtitle = dictionary["subtitle"] else { return nil }
-        self.id = dictionary["id"] ?? title
-		self.title = title
-		self.subtitle = subtitle
-	}
-    
     
     // MARK: - Loading Recipies
     
