@@ -9,16 +9,7 @@
     ]
   },
   {
-    "title": "Ellen’s Favorite",
-    "items": [
-      {
-        "title": "Whiskey Sour",
-        "subtitle": "Buffalo Trace bourbon, lemon juice, simple syrup, and optional egg white."
-      }
-    ]
-  },
-  {
-    "title": "House Favorite",
+    "title": "Party Favorite",
     "items": [
       {
         "title": "Electric Lemonade",
@@ -29,6 +20,10 @@
   {
     "title": "Featured Cocktails",
     "items": [
+      {
+        "title": "Whiskey Sour",
+        "subtitle": "Buffalo Trace bourbon, lemon juice, simple syrup, and optional egg white."
+      },
       {
         "title": "Sazerac",
         "subtitle": "Rittenhouse 100 Rye, Pierre Ferrand 1840 Cognac, bitters, lemon."
@@ -72,7 +67,7 @@
       },
       {
         "title": "Shirley Temple",
-        "subtitle": "A sweet, nonalcholic delite. Sprite and homemade Grenadine. Ellen’s non-alcholic go to."
+        "subtitle": "A sweet, nonalcholic delite. Sprite and homemade Grenadine. Solid non-alcholic go to."
       }
     ]
   },
