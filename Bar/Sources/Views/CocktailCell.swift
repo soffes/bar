@@ -1,47 +1,33 @@
-import UIKit
-import Static
+import SwiftUI
 
-final class CocktailCell: UITableViewCell, Cell {
+struct CocktailCell: View {
 
-	// MARK: - Initializers
-	
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-		super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+    // MARK: - Properties
 
-		backgroundColor = UIColor(white: 0.05, alpha: 1)
+    private let cocktail: Cocktail
 
-		let selectedView = UIView()
-		selectedView.backgroundColor = .black
-		selectedBackgroundView = selectedView
+    // MARK: - Initializers
 
-		guard let textLabel = textLabel, let detailTextLabel = detailTextLabel else { return }
+    init(_ cocktail: Cocktail) {
+        self.cocktail = cocktail
+    }
 
-		textLabel.translatesAutoresizingMaskIntoConstraints = false
-		textLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-		textLabel.textColor = .white
+    // MARK: - View
 
-		detailTextLabel.translatesAutoresizingMaskIntoConstraints = false
-		detailTextLabel.font = UIFont.systemFont(ofSize: 16)
-		detailTextLabel.numberOfLines = 3
-		detailTextLabel.textColor = UIColor(red: 0.427, green: 0.427, blue: 0.447, alpha: 1)
-
-		contentView.removeConstraints(textLabel.constraints)
-		contentView.removeConstraints(detailTextLabel.constraints)
-		contentView.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-
-		NSLayoutConstraint.activate([
-			textLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-			textLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-			textLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-
-			detailTextLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-			detailTextLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-			detailTextLabel.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 4),
-			detailTextLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
-		])
-	}
-
-	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(cocktail.title).font(.headline)
+            Text(cocktail.subtitle).font(.callout)
+        }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+    }
 }
+
+#if DEBUG
+struct CocktailCell_Previews: PreviewProvider {
+    static var previews: some View {
+        List {
+            CocktailCell(.oldFashioned)
+        }.listStyle(GroupedListStyle())
+    }
+}
+#endif

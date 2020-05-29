@@ -19,3 +19,9 @@ struct MenuGroup: Decodable {
         return sections
     }()
 }
+
+extension MenuGroup: Identifiable {
+    var id: String {
+        title
+    }
+}

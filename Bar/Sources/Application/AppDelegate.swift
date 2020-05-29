@@ -1,3 +1,4 @@
+import SwiftUI
 import UIKit
 
 @UIApplicationMain
@@ -16,13 +17,12 @@ extension AppDelegate: UIApplicationDelegate {
     {
 		application.isIdleTimerDisabled = true
 
-        let window = UIWindow()
-        window.tintColor = UIColor(displayP3Red: 1, green: 0.27, blue: 0.21, alpha: 1)
+        let rootView = NavigationView {
+            MenuView()
+        }
 
-        let viewController = UINavigationController(rootViewController: MenuViewController())
-        viewController.navigationBar.prefersLargeTitles = true
-        viewController.navigationBar.barStyle = .black
-        window.rootViewController = viewController
+        let window = UIWindow()
+        window.rootViewController = UIHostingController(rootView: rootView)
         window.makeKeyAndVisible()
         self.window = window
 

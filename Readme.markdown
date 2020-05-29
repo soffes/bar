@@ -6,4 +6,4 @@ Recipes from [Death & Co](http://www.amazon.com/gp/product/1607745259/ref=as_li_
 
 ## Building
 
-Xcode 11.5 is required. You'll need to get Bar's dependencies with [Carthage](https://github.com/carthage/carthage). Simply run `carthage bootstrap --platform=iOS` and then building normally in Xcode.
+Xcode 11.5 is required. Newer versions might also work. Just open the project and click ▶️

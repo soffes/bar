@@ -14,3 +14,15 @@ struct Cocktail: Decodable {
         return path.flatMap { try? String(contentsOfFile: $0, encoding: .utf8) }
     }
 }
+
+extension Cocktail: Identifiable {
+    var id: String {
+        title
+    }
+}
+
+#if DEBUG
+extension Cocktail {
+    static let oldFashioned = Cocktail(title: "Old Fashioned", subtitle: "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange.")
+}
+#endif
