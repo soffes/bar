@@ -17,7 +17,6 @@ final class CocktailViewController: UIViewController {
 		return view
 	}()
 
-
 	// MARK: - Initializers
 
 	required init(cocktail: Cocktail) {
@@ -34,7 +33,6 @@ final class CocktailViewController: UIViewController {
 	required init(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-
 
 	// MARK: - UIViewController
 

@@ -11,7 +11,7 @@ final class AppDelegate: UIResponder {
 
 		let viewController = UINavigationController(rootViewController: MenuViewController())
         viewController.navigationBar.prefersLargeTitles = true
-		viewController.navigationBar.barStyle = .blackTranslucent
+		viewController.navigationBar.barStyle = .black
         window.rootViewController = viewController
         
 		return window

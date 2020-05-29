@@ -9,7 +9,6 @@ class MenuViewController: TableViewController {
 		self.init(style: .grouped)
 	}
 
-
 	// MARK: - UIViewController
 
 	override func viewDidLoad() {
@@ -27,10 +26,9 @@ class MenuViewController: TableViewController {
 		}
 	}
 
-
 	// MARK: - Private
 
-	fileprivate func reloadData() {
+	private func reloadData() {
 		let array: [[String: AnyObject]]
 		do {
 			guard let path = Bundle.main.path(forResource: "Cocktails", ofType: "json", inDirectory: "Data"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return }
@@ -66,7 +64,7 @@ class MenuViewController: TableViewController {
 		}
 	}
 
-	fileprivate func didSelectCocktail(_ cocktail: Cocktail) {
+	private func didSelectCocktail(_ cocktail: Cocktail) {
 		let viewController = CocktailViewController(cocktail: cocktail)
 		navigationController?.pushViewController(viewController, animated: true)
 	}
