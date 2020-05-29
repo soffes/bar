@@ -78,6 +78,58 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		21547B4A2480DDA100A548BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21B0CF8E1B501FC4007E9F3C /* CocktailCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21547B4B2480DDA600A548BF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21B0CF911B501FC4007E9F3C /* MenuViewController.swift */,
+				21B0CF8F1B501FC4007E9F3C /* CocktailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		21547B4C2480DDAD00A548BF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		21547B4D2480DDB400A548BF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				21547B4C2480DDAD00A548BF /* Application */,
+				21547B492480DAB400A548BF /* Models */,
+				21547B4B2480DDA600A548BF /* View Controllers */,
+				21547B4A2480DDA100A548BF /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		21547B4E2480DDBD00A548BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21B0CF8C1B501FC4007E9F3C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21547B4F2480DDC300A548BF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				21B0CF901B501FC4007E9F3C /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		21B0CF501B501FA3007E9F3C = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +151,9 @@
 		21B0CF8A1B501FC4007E9F3C /* Bar */ = {
 			isa = PBXGroup;
 			children = (
-				21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */,
-				21547B492480DAB400A548BF /* Models */,
-				21B0CF8E1B501FC4007E9F3C /* CocktailCell.swift */,
-				21B0CF911B501FC4007E9F3C /* MenuViewController.swift */,
-				21B0CF8F1B501FC4007E9F3C /* CocktailViewController.swift */,
-				21B0CF901B501FC4007E9F3C /* Info.plist */,
-				21B0CF8C1B501FC4007E9F3C /* Assets.xcassets */,
+				21547B4D2480DDB400A548BF /* Sources */,
+				21547B4F2480DDC300A548BF /* Support */,
+				21547B4E2480DDBD00A548BF /* Resources */,
 			);
 			path = Bar;
 			sourceTree = "<group>";
@@ -325,7 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Build/iOS\"";
-				INFOPLIST_FILE = Bar/Info.plist;
+				INFOPLIST_FILE = Bar/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.Bar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,7 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Build/iOS\"";
-				INFOPLIST_FILE = Bar/Info.plist;
+				INFOPLIST_FILE = Bar/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.Bar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
