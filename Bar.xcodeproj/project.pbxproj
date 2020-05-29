@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2107B3741B50315F004FD18C /* Static.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2107B3731B50315F004FD18C /* Static.framework */; };
 		21547B482480DA5E00A548BF /* MenuGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21547B472480DA5E00A548BF /* MenuGroup.swift */; };
+		21547B512480DF5000A548BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21547B502480DF4F00A548BF /* LaunchScreen.storyboard */; };
 		218F603B1C00EB8C005BEC8D /* Static.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 218F60391C00EB76005BEC8D /* Static.framework.dSYM */; };
 		21B0CFA71B501FC4007E9F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */; };
 		21B0CFA81B501FC4007E9F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B0CF8C1B501FC4007E9F3C /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		2107B3731B50315F004FD18C /* Static.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Static.framework; path = Carthage/Build/iOS/Static.framework; sourceTree = "<group>"; };
 		21547B472480DA5E00A548BF /* MenuGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGroup.swift; sourceTree = "<group>"; };
+		21547B502480DF4F00A548BF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218F60391C00EB76005BEC8D /* Static.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Static.framework.dSYM; path = Carthage/Build/iOS/Static.framework.dSYM; sourceTree = "<group>"; };
 		21B0CF591B501FA3007E9F3C /* Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				21B0CF8C1B501FC4007E9F3C /* Assets.xcassets */,
+				21547B502480DF4F00A548BF /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21547B512480DF5000A548BF /* LaunchScreen.storyboard in Resources */,
 				21B0CFA81B501FC4007E9F3C /* Assets.xcassets in Resources */,
 				21B0CFC31B501FD5007E9F3C /* Data in Resources */,
 			);
