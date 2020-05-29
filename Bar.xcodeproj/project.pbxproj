@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2107B3741B50315F004FD18C /* Static.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2107B3731B50315F004FD18C /* Static.framework */; };
+		21547B482480DA5E00A548BF /* MenuGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21547B472480DA5E00A548BF /* MenuGroup.swift */; };
 		218F603B1C00EB8C005BEC8D /* Static.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 218F60391C00EB76005BEC8D /* Static.framework.dSYM */; };
 		21B0CFA71B501FC4007E9F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */; };
 		21B0CFA81B501FC4007E9F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B0CF8C1B501FC4007E9F3C /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		2107B3731B50315F004FD18C /* Static.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Static.framework; path = Carthage/Build/iOS/Static.framework; sourceTree = "<group>"; };
+		21547B472480DA5E00A548BF /* MenuGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGroup.swift; sourceTree = "<group>"; };
 		218F60391C00EB76005BEC8D /* Static.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Static.framework.dSYM; path = Carthage/Build/iOS/Static.framework.dSYM; sourceTree = "<group>"; };
 		21B0CF591B501FA3007E9F3C /* Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		21547B492480DAB400A548BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21B0CF8D1B501FC4007E9F3C /* Cocktail.swift */,
+				21547B472480DA5E00A548BF /* MenuGroup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		21B0CF501B501FA3007E9F3C = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				21B0CF8B1B501FC4007E9F3C /* AppDelegate.swift */,
-				21B0CF8D1B501FC4007E9F3C /* Cocktail.swift */,
+				21547B492480DAB400A548BF /* Models */,
 				21B0CF8E1B501FC4007E9F3C /* CocktailCell.swift */,
 				21B0CF911B501FC4007E9F3C /* MenuViewController.swift */,
 				21B0CF8F1B501FC4007E9F3C /* CocktailViewController.swift */,
@@ -192,6 +203,7 @@
 				21B0CFAB1B501FC4007E9F3C /* CocktailViewController.swift in Sources */,
 				21B0CFAD1B501FC4007E9F3C /* MenuViewController.swift in Sources */,
 				21B0CFA71B501FC4007E9F3C /* AppDelegate.swift in Sources */,
+				21547B482480DA5E00A548BF /* MenuGroup.swift in Sources */,
 				21B0CFA91B501FC4007E9F3C /* Cocktail.swift in Sources */,
 				21B0CFAA1B501FC4007E9F3C /* CocktailCell.swift in Sources */,
 			);

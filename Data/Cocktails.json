@@ -1,7 +1,7 @@
 [
   {
     "title": "Sam’s Favorite",
-    "items": [
+    "cocktails": [
       {
         "title": "Old Fashioned",
         "subtitle": "Classic Bourbon cocktail with 10-year old Eagle Rare, bitters, and hints of orange."
@@ -10,7 +10,7 @@
   },
   {
     "title": "Party Favorite",
-    "items": [
+    "cocktails": [
       {
         "title": "Electric Lemonade",
         "subtitle": "Absolut Citron, Blue Curaçao, sweet & sour, and Sprite. Served with a glowing surprise."
@@ -19,7 +19,7 @@
   },
   {
     "title": "Featured Cocktails",
-    "items": [
+    "cocktails": [
       {
         "title": "Whiskey Sour",
         "subtitle": "Buffalo Trace bourbon, lemon juice, simple syrup, and optional egg white."
@@ -44,7 +44,7 @@
   },
   {
     "title": "House Classics",
-    "items": [
+    "cocktails": [
       {
         "title": "Kamikaze",
         "subtitle": "Equal parts Grey Goose vodka, Cointreau, lime juice with lime spiral."
@@ -73,7 +73,7 @@
   },
   {
     "title": "Retired Cocktails",
-    "items": [
+    "cocktails": [
       {
         "title": "Martini",
         "subtitle": "Grey Goose vodka or Tanqueray gin with extra dry vermouth served with stuffed green olives."
@@ -91,7 +91,6 @@
         "subtitle": "Classic Kentucky Derby libation. Baker’s bourbon served with a mint bouquet in a copper tin."
       },
       {
-        "id": "Pina Colada",
         "title": "Piña Colada",
         "subtitle": "Malibu Coconut rum, pineapple juice, and cream. Blended to island perfection."
       }
