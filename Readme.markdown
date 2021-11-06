@@ -6,4 +6,4 @@ Recipes from [Death & Co](http://www.amazon.com/gp/product/1607745259/ref=as_li_
 
 ## Building
 
-Xcode 11.5 is required. Newer versions might also work. Just open the project and click ▶️
+Xcode 13+ is required. Just open the project and click ▶️
