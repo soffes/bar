@@ -20,7 +20,7 @@ struct MenuView: View {
                 }
             }
         }
-        .listStyle(GroupedListStyle())
+        .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("Menu")
     }
 }
